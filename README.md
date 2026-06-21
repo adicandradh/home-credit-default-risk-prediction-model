@@ -5,22 +5,26 @@ Project-Based Internship – Home Credit Indonesia (Data Scientist)
 
 ## 📊 Overview
 
-Project ini merupakan implementasi machine learning untuk memprediksi risiko gagal bayar (credit default risk) pada pengajuan pinjaman menggunakan dataset Home Credit.
+Project ini merupakan implementasi machine learning untuk memprediksi risiko gagal bayar (*credit default risk*) pada pengajuan pinjaman menggunakan dataset Home Credit.
 
-Model dikembangkan untuk membantu proses credit scoring sehingga keputusan pemberian pinjaman dapat dilakukan secara lebih akurat dan berbasis data. Dengan memanfaatkan informasi historis calon nasabah, model diharapkan mampu membedakan pemohon dengan risiko gagal bayar rendah maupun tinggi, sehingga dapat mendukung pengelolaan risiko kredit yang lebih efektif.
+Tujuan utama project ini adalah membangun model klasifikasi yang mampu mengidentifikasi nasabah dengan risiko gagal bayar lebih tinggi sehingga dapat mendukung proses credit scoring secara lebih objektif dan berbasis data. Selain itu, model diharapkan dapat membantu mengurangi penolakan terhadap calon nasabah yang sebenarnya memiliki kemampuan untuk melunasi pinjaman.
 
-Project ini mencakup proses end-to-end mulai dari exploratory data analysis (EDA), data cleaning, feature engineering, data preprocessing, model training, hyperparameter tuning, model evaluation, hingga prediksi pada data testing.
+Project dikembangkan secara end-to-end mulai dari exploratory data analysis (EDA), data cleaning, feature engineering, data preprocessing, hyperparameter tuning, model evaluation, hingga prediksi probabilitas default pada data testing.
+
+---
 
 ## 🎯 Objectives
 
-- Melakukan exploratory data analysis (EDA) untuk memahami karakteristik dataset.
-- Membersihkan dan mempersiapkan data sebelum proses pemodelan.
-- Mengembangkan fitur-fitur baru yang dapat meningkatkan performa model.
-- Membangun dan membandingkan dua model machine learning, yaitu Logistic Regression dan XGBoost.
-- Melakukan hyperparameter tuning untuk memperoleh konfigurasi model terbaik.
+- Memahami karakteristik dataset dan distribusi target.
+- Melakukan data cleaning dan preprocessing sebelum proses pemodelan.
+- Mengembangkan fitur-fitur yang dapat meningkatkan performa model.
+- Membangun dan membandingkan dua algoritma machine learning, yaitu Logistic Regression dan XGBoost.
+- Melakukan hyperparameter tuning menggunakan RandomizedSearchCV.
 - Mengevaluasi performa model menggunakan ROC-AUC dan Log Loss.
 - Mengidentifikasi fitur-fitur yang paling berpengaruh terhadap prediksi risiko gagal bayar.
 - Menghasilkan prediksi probabilitas default pada data testing.
+
+---
 
 ## ⚙️ Machine Learning Pipeline
 
@@ -29,35 +33,64 @@ Project ini mencakup proses end-to-end mulai dari exploratory data analysis (EDA
 3. Data Cleaning
 4. Feature Engineering
 5. Train-Validation Split
-6. Missing Value Handling
+6. Missing Value Imputation
 7. Outlier Handling (Winsorization)
-8. Encoding & Feature Scaling
-9. Model Training
-10. Hyperparameter Tuning
-11. Model Evaluation
-12. Prediction on Test Dataset
+8. Feature Encoding & Scaling
+9. Class Imbalance Handling (SMOTE)
+10. Model Training
+11. Hyperparameter Tuning
+12. Model Evaluation
 13. Feature Importance Analysis
+14. Prediction on Test Dataset
 
-## 🔧 Data Preprocessing
+---
 
-Tahapan preprocessing yang diterapkan meliputi:
+## 🛠️ Tools & Libraries
 
-- Penanganan missing values menggunakan imputasi.
-- Penanganan nilai anomali pada beberapa variabel.
-- Winsorization untuk mengurangi pengaruh outlier.
-- Feature engineering berbasis karakteristik finansial dan profil nasabah.
-- Encoding variabel kategorikal menggunakan `OrdinalEncoder`.
-- Standardisasi fitur numerik menggunakan `StandardScaler`.
-- Penanganan class imbalance menggunakan `SMOTE`.
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Imbalanced-learn (SMOTE)
+- XGBoost
+
+---
 
 ## 🤖 Machine Learning Models
 
-Model yang digunakan pada project ini:
+Dua algoritma yang digunakan pada project ini adalah:
 
-- Logistic Regression
-- XGBoost Classifier
+- **Logistic Regression**
+- **XGBoost Classifier**
 
 Hyperparameter tuning dilakukan menggunakan **RandomizedSearchCV** dengan **Stratified 5-Fold Cross Validation**.
+
+---
+
+## ⚙️ Best Hyperparameters
+
+### Logistic Regression
+
+| Parameter | Value |
+|-----------|-------|
+| C | `<<ISI SETELAH RUN>>` |
+| Penalty | `<<ISI SETELAH RUN>>` |
+| Solver | `saga` |
+
+### XGBoost
+
+| Parameter | Value |
+|-----------|-------|
+| n_estimators | `<<ISI SETELAH RUN>>` |
+| max_depth | `<<ISI SETELAH RUN>>` |
+| learning_rate | `<<ISI SETELAH RUN>>` |
+| subsample | `<<ISI SETELAH RUN>>` |
+| colsample_bytree | `<<ISI SETELAH RUN>>` |
+| scale_pos_weight | `<<ISI SETELAH RUN>>` |
+
+---
 
 ## 📈 Model Performance Benchmark
 
@@ -68,18 +101,22 @@ Evaluasi dilakukan menggunakan **Stratified 5-Fold Cross Validation**.
 | Logistic Regression | `<<ISI SETELAH RUN>>` | `<<ISI SETELAH RUN>>` |
 | XGBoost | `<<ISI SETELAH RUN>>` | `<<ISI SETELAH RUN>>` |
 
-### Validation Set Performance
+---
+
+## 🧪 Validation Set Performance
 
 | Algorithm | ROC-AUC | Log Loss |
 |------------|--------:|---------:|
 | Logistic Regression | `<<ISI SETELAH RUN>>` | `<<ISI SETELAH RUN>>` |
 | XGBoost | `<<ISI SETELAH RUN>>` | `<<ISI SETELAH RUN>>` |
 
-> **Selected Model:** `<<ISI SETELAH RUN (misal: XGBoost)>>` dipilih sebagai model terbaik berdasarkan hasil evaluasi ROC-AUC dan Log Loss.
+Berdasarkan hasil evaluasi tersebut, model **`<<ISI SETELAH RUN>>`** dipilih sebagai model terbaik karena memberikan performa yang lebih baik pada metrik ROC-AUC dan Log Loss.
 
-## 🔍 Top Feature Importance
+---
 
-Berdasarkan model terbaik, enam fitur yang paling berpengaruh terhadap prediksi risiko gagal bayar adalah:
+## 🔍 Top 6 Feature Importance
+
+Berikut enam fitur dengan kontribusi terbesar berdasarkan model terbaik:
 
 | Rank | Feature |
 |------|---------|
@@ -90,21 +127,25 @@ Berdasarkan model terbaik, enam fitur yang paling berpengaruh terhadap prediksi 
 | 5 | `<<ISI SETELAH RUN>>` |
 | 6 | `<<ISI SETELAH RUN>>` |
 
+Analisis feature importance membantu memahami faktor-faktor yang paling memengaruhi prediksi risiko gagal bayar serta meningkatkan interpretabilitas model.
+
+---
+
 ## 💡 Business Recommendations
 
-- Mengintegrasikan model machine learning sebagai alat bantu dalam proses credit scoring untuk meningkatkan konsistensi pengambilan keputusan.
-- Memanfaatkan probabilitas prediksi sebagai indikator tambahan dalam mengevaluasi pengajuan pinjaman berisiko tinggi.
-- Memprioritaskan validasi dan kualitas data pada fitur-fitur yang memiliki kontribusi besar terhadap performa model.
-- Melakukan retraining model secara berkala menggunakan data terbaru agar performa prediksi tetap optimal.
-- Menyesuaikan strategi pemberian pinjaman, seperti limit kredit atau tenor, berdasarkan tingkat risiko yang diprediksi oleh model.
+- Mengintegrasikan model machine learning ke dalam proses credit scoring sebagai alat bantu pengambilan keputusan.
+- Menggunakan probabilitas prediksi sebagai indikator tambahan untuk mengevaluasi pengajuan pinjaman dengan tingkat risiko tinggi.
+- Memprioritaskan kualitas dan validasi data pada fitur-fitur yang memiliki pengaruh besar terhadap hasil prediksi.
+- Melakukan retraining model secara berkala menggunakan data terbaru agar performa tetap optimal.
+- Menyesuaikan strategi pemberian pinjaman, seperti limit kredit atau tenor, berdasarkan tingkat risiko yang diprediksi model.
 
-## 🛠️ Tools & Libraries
+---
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- Imbalanced-learn
-- XGBoost
+## 📁 Repository Structure
+
+```text
+├── home_credit_default_risk_prediction.ipynb
+├── submission_logreg.csv
+├── submission_xgb.csv
+└── README.md
+```
