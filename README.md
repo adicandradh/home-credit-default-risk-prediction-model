@@ -1,4 +1,4 @@
-🏦 Home Credit Default Risk Prediction
+# Home Credit Default Risk Prediction
 
 ## 📌 Project Type
 Project-Based Internship – Home Credit Indonesia (Data Scientist)
