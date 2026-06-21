@@ -69,51 +69,32 @@ Hyperparameter tuning dilakukan menggunakan **RandomizedSearchCV** dengan **Stra
 
 ---
 
-## ⚙️ Best Hyperparameters
-
-### Logistic Regression
-
-| Parameter | Value |
-|-----------|-------|
-| C | `<<ISI SETELAH RUN>>` |
-| Penalty | `<<ISI SETELAH RUN>>` |
-| Solver | `saga` |
-
-### XGBoost
-
-| Parameter | Value |
-|-----------|-------|
-| n_estimators | `<<ISI SETELAH RUN>>` |
-| max_depth | `<<ISI SETELAH RUN>>` |
-| learning_rate | `<<ISI SETELAH RUN>>` |
-| subsample | `<<ISI SETELAH RUN>>` |
-| colsample_bytree | `<<ISI SETELAH RUN>>` |
-| scale_pos_weight | `<<ISI SETELAH RUN>>` |
-
----
-
 ## 📈 Model Performance Benchmark
 
-Evaluasi dilakukan menggunakan **Stratified 5-Fold Cross Validation**.
+### Best Hyperparameters
+
+| Model | Best Parameters |
+|---------|----------------|
+| Logistic Regression | `C = <<ISI SETELAH RUN>>`, `Penalty = <<ISI SETELAH RUN>>`, `Solver = saga` |
+| XGBoost | `n_estimators = <<ISI SETELAH RUN>>`, `max_depth = <<ISI SETELAH RUN>>`, `learning_rate = <<ISI SETELAH RUN>>`, `subsample = <<ISI SETELAH RUN>>`, `colsample_bytree = <<ISI SETELAH RUN>>`, `scale_pos_weight = <<ISI SETELAH RUN>>` |
+
+### 5-Fold Cross Validation
 
 | Algorithm | Mean ROC-AUC | Mean Log Loss |
 |------------|-------------:|--------------:|
 | Logistic Regression | `<<ISI SETELAH RUN>>` | `<<ISI SETELAH RUN>>` |
 | XGBoost | `<<ISI SETELAH RUN>>` | `<<ISI SETELAH RUN>>` |
 
----
+Evaluasi dilakukan menggunakan **Stratified 5-Fold Cross Validation** untuk memperoleh estimasi performa model yang lebih stabil dan mengurangi risiko overfitting.
 
-## 🧪 Validation Set Performance
+### Validation Set Performance
 
 | Algorithm | ROC-AUC | Log Loss |
 |------------|--------:|---------:|
 | Logistic Regression | `<<ISI SETELAH RUN>>` | `<<ISI SETELAH RUN>>` |
 | XGBoost | `<<ISI SETELAH RUN>>` | `<<ISI SETELAH RUN>>` |
 
-Berdasarkan hasil evaluasi tersebut, model **`<<ISI SETELAH RUN>>`** dipilih sebagai model terbaik karena memberikan performa yang lebih baik pada metrik ROC-AUC dan Log Loss.
-
----
-
+Berdasarkan hasil evaluasi di atas, model **`<<ISI SETELAH RUN>>`** dipilih sebagai model terbaik karena menghasilkan kombinasi **ROC-AUC yang lebih tinggi** dan **Log Loss yang lebih rendah**, sehingga memiliki kemampuan yang lebih baik dalam membedakan kelas serta menghasilkan probabilitas prediksi yang lebih akurat.
 ## 🔍 Top 6 Feature Importance
 
 Berikut enam fitur dengan kontribusi terbesar berdasarkan model terbaik:
