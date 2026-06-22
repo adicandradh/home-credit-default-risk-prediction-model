@@ -87,7 +87,7 @@ Hyperparameter tuning dilakukan menggunakan **GridSearchCV** dengan **Stratified
 
 ### Validation Data Performance
 
-| Algorithm | ROC-AUC | Log Loss |
+| Model | ROC-AUC | Log Loss |
 |------------|--------:|---------:|
 | Logistic Regression | **0.7447** | **0.5836** |
 | XGBoost | **0.7680** | **0.5358** |
