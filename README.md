@@ -138,3 +138,12 @@ Hasil tersebut menunjukkan bahwa informasi dari sumber data eksternal (*EXT_SOUR
 - Menyesuaikan strategi pemberian pinjaman, seperti limit kredit, tenor, atau kebijakan mitigasi risiko lainnya, berdasarkan tingkat risiko yang diprediksi model.
 
 ---
+
+## 📁 Repository Structure
+
+```text
+├── home_credit_default_risk_prediction.ipynb
+├── submission_logreg.csv
+├── submission_xgb.csv
+└── README.md
+```
