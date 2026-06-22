@@ -11,6 +11,14 @@ Pipeline dikembangkan secara end-to-end mulai dari exploratory data analysis (ED
 
 ---
 
+## 📂 Dataset Overview
+
+Dataset yang digunakan merupakan data historis pengajuan pinjaman dari Home Credit yang terdiri dari **307.511 data training** dengan **122 kolom** dan **48.744 data testing** dengan **121 kolom**. Pada data training, kolom `TARGET` digunakan sebagai variabel target untuk mengidentifikasi apakah seorang pemohon mengalami gagal bayar (`1`) atau tidak (`0`), sedangkan data testing tidak memiliki kolom target dan digunakan untuk menghasilkan prediksi akhir.
+
+Hasil eksplorasi data menunjukkan bahwa dataset memiliki **missing values pada sejumlah fitur**, terutama pada variabel yang berkaitan dengan informasi properti dan sumber data eksternal, namun **tidak ditemukan data duplikat**. Selain itu, distribusi target menunjukkan kondisi **class imbalance**, di mana sekitar **91,93%** data termasuk kategori **Tidak Berisiko (`TARGET = 0`)** dan hanya sekitar **8,07%** termasuk kategori **Berisiko (`TARGET = 1`)**. Oleh karena itu, strategi penanganan ketidakseimbangan kelas diterapkan selama proses pengembangan model.
+
+---
+
 ## 🎯 Objectives
 
 - Memahami karakteristik data dan distribusi target melalui exploratory data analysis.
