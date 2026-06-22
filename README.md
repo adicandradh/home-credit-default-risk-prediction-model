@@ -90,7 +90,7 @@ Berdasarkan hasil evaluasi pada **validation data**, **XGBoost** dipilih sebagai
 
 ## 📤 Prediction on Test Data
 
-Model XGBoost digunakan untuk memprediksi probabilitas gagal bayar pada **48.744 data testing** yang tidak memiliki label target.
+Model XGBoost digunakan untuk memprediksi probabilitas gagal bayar pada **48.744 test data** yang tidak memiliki label target.
 
 Contoh hasil prediksi:
 
@@ -110,7 +110,7 @@ Output prediksi disimpan dalam file:
 
 ## 🔍 Top 10 Feature Importance (XGBoost)
 
-Berdasarkan hasil pelatihan model **XGBoost**, sepuluh fitur berikut memberikan kontribusi terbesar dalam memprediksi risiko gagal bayar pada **data training**:
+Berdasarkan hasil pelatihan model **XGBoost**, sepuluh fitur berikut memberikan kontribusi terbesar dalam memprediksi risiko gagal bayar pada **train data**:
 
 | Rank | Feature | Description |
 |------|---------|-------------|
