@@ -1,26 +1,19 @@
 # Home Credit Default Risk Prediction Model
 
 ## 📌 Project Type
-Project-Based Internship – Home Credit Indonesia (Data Scientist)
+Project-Based Internship – Home Credit Indonesia: Data Scientist
 
 ## 📊 Overview
-
 Project ini bertujuan untuk membangun model machine learning yang dapat memprediksi risiko gagal bayar (*credit default risk*) pada pengajuan pinjaman menggunakan dataset Home Credit. Model yang dihasilkan diharapkan dapat membantu proses *credit scoring* sehingga keputusan pemberian pinjaman menjadi lebih objektif, cepat, dan berbasis data.
 
 Pipeline dikembangkan secara end-to-end mulai dari exploratory data analysis (EDA), data cleaning, feature engineering, preprocessing, penanganan *class imbalance*, hyperparameter tuning, evaluasi model, hingga prediksi probabilitas gagal bayar pada **data testing**.
 
----
-
 ## 📂 Dataset Overview
-
 Dataset yang digunakan merupakan data historis pengajuan pinjaman dari Home Credit yang terdiri dari **307.511 data training** dengan **122 kolom** dan **48.744 data testing** dengan **121 kolom**. Pada data training, kolom `TARGET` digunakan sebagai variabel target untuk mengidentifikasi apakah seorang pemohon mengalami gagal bayar (`1`) atau tidak (`0`), sedangkan data testing tidak memiliki kolom target dan digunakan untuk menghasilkan prediksi akhir.
 
 Hasil eksplorasi data menunjukkan bahwa dataset memiliki **missing values pada sejumlah fitur**, terutama pada variabel yang berkaitan dengan informasi properti dan sumber data eksternal, namun **tidak ditemukan data duplikat**. Selain itu, distribusi target menunjukkan kondisi **class imbalance**, di mana sekitar **91,93%** data termasuk kategori **Tidak Berisiko (`TARGET = 0`)** dan hanya sekitar **8,07%** termasuk kategori **Berisiko (`TARGET = 1`)**. Oleh karena itu, strategi penanganan ketidakseimbangan kelas diterapkan selama proses pengembangan model.
 
----
-
 ## 🎯 Objectives
-
 - Memahami karakteristik data dan distribusi target melalui exploratory data analysis.
 - Melakukan data cleaning dan preprocessing untuk meningkatkan kualitas data.
 - Mengembangkan fitur-fitur baru yang dapat meningkatkan performa model.
@@ -30,10 +23,7 @@ Hasil eksplorasi data menunjukkan bahwa dataset memiliki **missing values pada s
 - Mengidentifikasi fitur-fitur yang paling berpengaruh terhadap prediksi risiko gagal bayar.
 - Menghasilkan probabilitas prediksi pada data testing.
 
----
-
 ## ⚙️ Machine Learning Pipeline
-
 1. Data Understanding
 2. Exploratory Data Analysis (EDA)
 3. Data Cleaning
@@ -50,10 +40,7 @@ Hasil eksplorasi data menunjukkan bahwa dataset memiliki **missing values pada s
 12. Feature Importance Analysis
 13. Prediction on Test Data
 
----
-
 ## 🛠️ Tools & Libraries
-
 - Python
 - Pandas
 - NumPy
@@ -63,21 +50,14 @@ Hasil eksplorasi data menunjukkan bahwa dataset memiliki **missing values pada s
 - Imbalanced-learn (SMOTE)
 - XGBoost
 
----
-
 ## 🤖 Machine Learning Models
-
 Project ini membandingkan dua algoritma klasifikasi, yaitu:
-
 - **Logistic Regression**
 - **XGBoost Classifier**
 
 Hyperparameter tuning dilakukan menggunakan **GridSearchCV** dengan **Stratified 5-Fold Cross Validation** untuk memperoleh kombinasi parameter terbaik pada masing-masing model.
 
----
-
 ## 📈 Model Performance
-
 ### Best Hyperparameters
 
 | Model | Best Parameters |
@@ -94,7 +74,6 @@ Hyperparameter tuning dilakukan menggunakan **GridSearchCV** dengan **Stratified
 
 Berdasarkan hasil evaluasi pada **validation data**, **XGBoost** dipilih sebagai model terbaik karena menghasilkan **ROC-AUC** yang lebih tinggi dan **Log Loss** yang lebih rendah dibandingkan Logistic Regression. Oleh karena itu, model XGBoost digunakan untuk menghasilkan prediksi pada **test data**.
 
----
 
 ## 📤 Prediction on Test Data
 
@@ -111,10 +90,7 @@ Contoh hasil prediksi:
 | 100038 | 0.611128 |
 
 Output prediksi disimpan dalam file:
-
 - `submission_xgb.csv`
-
----
 
 ## 🔍 Top 10 Feature Importance (XGBoost)
 
@@ -135,14 +111,10 @@ Berdasarkan hasil pelatihan model **XGBoost**, sepuluh fitur berikut memberikan 
 
 Hasil tersebut menunjukkan bahwa informasi dari sumber data eksternal (*EXT_SOURCE*), karakteristik demografis, serta beberapa fitur hasil *feature engineering* memberikan kontribusi yang signifikan dalam membedakan pemohon dengan risiko gagal bayar tinggi maupun rendah.
 
----
-
 ## 💡 Business Recommendations
-
 - Mengintegrasikan model XGBoost ke dalam proses *credit scoring* sebagai alat bantu pengambilan keputusan pemberian pinjaman.
 - Menggunakan probabilitas prediksi sebagai indikator tambahan dalam mengevaluasi pengajuan pinjaman yang memiliki risiko gagal bayar tinggi.
 - Memprioritaskan kualitas dan validasi data pada fitur-fitur yang memiliki pengaruh besar terhadap hasil prediksi, terutama variabel yang berasal dari sumber data eksternal (*EXT_SOURCE*).
 - Melakukan *retraining* model secara berkala menggunakan data terbaru agar performa prediksi tetap optimal.
 - Menyesuaikan strategi pemberian pinjaman, seperti limit kredit, tenor, atau kebijakan mitigasi risiko lainnya, berdasarkan tingkat risiko yang diprediksi model.
 
----
