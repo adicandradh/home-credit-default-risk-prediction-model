@@ -1,7 +1,7 @@
 # Home Credit Default Risk Prediction Model
 
 ## 📌 Project Type
-Project-Based Internship – Home Credit Indonesia: Data Scientist
+Project-Based Internship: Data Scientist – Home Credit Indonesia x Rakamin Academy
 
 ## 📊 Overview
 Project ini bertujuan untuk membangun model machine learning yang dapat memprediksi risiko gagal bayar (*credit default risk*) pada pengajuan pinjaman menggunakan dataset Home Credit. Model yang dihasilkan diharapkan dapat membantu proses *credit scoring* sehingga keputusan pemberian pinjaman menjadi lebih objektif, cepat, dan berbasis data.
